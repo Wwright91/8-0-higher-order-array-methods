@@ -26,18 +26,18 @@ function sortByRuntimeAscending(songs) {
  * @returns {Object[]}
  */
 function sortByArtistNameDescending(songs) {
-//   songs.sort((a, b) => { 
-//     if (a.artist.toLowerCase() > b.artist.toLowerCase()) {
-//       return -1;
-//     }
-//     if (a.artist.toLowerCase() < b.artist.toLowerCase()){
-//       return 1;
-//     }
-//     return 0
-//   });
-//   return songs
-// }
-  return songs.sort((a, b) =>  a.artist.toUpperCase() < b.artist.toUpperCase() ? 1: -1);
+  // songs.sort((a, b) => { 
+  //   if (a.artist.toLowerCase() > b.artist.toLowerCase()) {
+  //     return -1;
+  //   }
+  //   if (a.artist.toLowerCase() < b.artist.toLowerCase()){
+  //     return 1;
+  //   }
+  //   return 0
+  // });
+  // return songs
+
+  return songs.sort((a, b) =>  a.artist.toUpperCase() < b.artist.toUpperCase() ? 1: -1 || 0);
 }
 
 /**
@@ -59,7 +59,7 @@ function sortBySongTitleAscending(songs) {
   //   return 0
   // });
   // return songs
-  return songs.sort((a, b) =>  a.title.toUpperCase() > b.title.toUpperCase() ? 1: -1);
+  return songs.sort((a, b) =>  a.title.toUpperCase() > b.title.toUpperCase() ? 1: -1 || 0);
 }
 
 module.exports = {
